@@ -975,15 +975,26 @@
             <div class="birthday-title">
                 <svg viewBox="0 0 500 120" id="titleSvg">
                     <defs>
-                        <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="#C084FC"/>
-                            <stop offset="35%" stop-color="#9333EA"/>
-                            <stop offset="70%" stop-color="#6D28D9"/>
-                            <stop offset="100%" stop-color="#2E1065"/>
-                        </linearGradient>
-                    </defs>
+    <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#C084FC"/>
+        <stop offset="35%" stop-color="#9333EA"/>
+        <stop offset="70%" stop-color="#6D28D9"/>
+        <stop offset="100%" stop-color="#2E1065"/>
+    </linearGradient>
+
+    <!-- Purple glow -->
+    <filter id="birthdayGlow" x="-30%" y="-50%" width="160%" height="200%">
+        <feDropShadow
+            dx="0"
+            dy="0"
+            stdDeviation="3"
+            flood-color="#D8B4FE"
+            flood-opacity="0.9"
+        />
+    </filter>
+</defs>
                     <path id="curve1" class="title-path" d="M50 80 Q250 30 450 80"/>
-                    <text>
+                    <text filter="url(#birthdayGlow)">
                         <textPath href="#curve1" startOffset="50%">HAPPY BIRTHDAY!</textPath>
                     </text>
                 </svg>
