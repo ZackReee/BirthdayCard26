@@ -170,14 +170,14 @@
             fill: #C4B5FD;
             stroke: #8B5CF6;
             stroke-width: 2;
-            transform-origin: 140px 80px;
-            transform-box: view-box;
-            transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform-origin: 50% 0%;
+            transform-box: fill-box;
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1.0);
         }
 
         .envelope-flap.open {
             /* Rotate around the top hinge so the flap stays attached to the envelope */
-            transform: rotate(180deg);
+            transform: rotateX(180deg);
         }
 
         .envelope-heart {
